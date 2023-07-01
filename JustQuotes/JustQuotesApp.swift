@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct JustQuotesApp: App {
+    
+    init() {
+        Configurator.shared.registerServices()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var quoteViewModel = QuoteViewModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Spacer()
+            
+            Text("\(quoteViewModel.text)")
+            
+            Spacer()
+            
+            Button {
+                quoteViewModel.loadQuote()
+            } label: {
+                Text("ANOTHER QUOTE")
+            }
         }
         .padding()
+        .onAppear {
+            quoteViewModel.loadQuote()
+        }
+    }
+    
+    mutating func loadQuote() {
+        
     }
 }
 
