@@ -16,6 +16,7 @@
 		156C14EE2A50AE3A00123F64 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156C14ED2A50AE3A00123F64 /* ServiceLocator.swift */; };
 		156C14F02A50B1D600123F64 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156C14EF2A50B1D600123F64 /* Configurator.swift */; };
 		156C14F22A50B32300123F64 /* InjectedWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156C14F12A50B32300123F64 /* InjectedWrapper.swift */; };
+		15DDA2B52A51AEB600D495C2 /* NetworkPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 15DDA2B42A51AEB600D495C2 /* NetworkPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15DDA2B52A51AEB600D495C2 /* NetworkPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +108,9 @@
 			dependencies = (
 			);
 			name = JustQuotes;
+			packageProductDependencies = (
+				15DDA2B42A51AEB600D495C2 /* NetworkPackage */,
+			);
 			productName = JustQuotes;
 			productReference = 156C14D92A50A07E00123F64 /* JustQuotes.app */;
 			productType = "com.apple.product-type.application";
@@ -134,6 +139,9 @@
 				Base,
 			);
 			mainGroup = 156C14D02A50A07E00123F64;
+			packageReferences = (
+				15DDA2B32A51AEB600D495C2 /* XCRemoteSwiftPackageReference "NetworkPackage" */,
+			);
 			productRefGroup = 156C14DA2A50A07E00123F64 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -367,6 +375,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15DDA2B32A51AEB600D495C2 /* XCRemoteSwiftPackageReference "NetworkPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MityuninDmitry/NetworkPackage.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15DDA2B42A51AEB600D495C2 /* NetworkPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15DDA2B32A51AEB600D495C2 /* XCRemoteSwiftPackageReference "NetworkPackage" */;
+			productName = NetworkPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 156C14D12A50A07E00123F64 /* Project object */;
 }

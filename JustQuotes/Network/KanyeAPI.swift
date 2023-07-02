@@ -6,37 +6,15 @@
 //
 
 import Foundation
+import NetworkPackage
 
-
-class KanyeAPI {
-    let url = URL(string: "https://api.kanye.rest")!
+class KanyeAPI: AppNetwork<KanyeQuote> {
     
-    
-    func loadQuote() async -> String {
-        do {
-            let (data, response) = try await URLSession.shared.data(from: url)
-            
-            let responseData = response as! HTTPURLResponse
-            
-            if responseData.statusCode != 200 {
-                return ""
-            }
-            
-            let quote =  try? JSONDecoder().decode(Quote.self, from: data)
-            
-            return quote!.quote
-        } catch {
-            
-        }
-        
-        
-        return ""
-       
-    }
 }
 
 
-struct Quote: Codable {
+
+struct KanyeQuote: Codable {
     let quote: String
 }
 

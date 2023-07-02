@@ -19,14 +19,14 @@ struct ContentView: View {
             Spacer()
             
             Button {
-                quoteViewModel.loadQuote()
+                quoteViewModel.getQuote()
             } label: {
                 Text("ANOTHER QUOTE")
             }
         }
         .padding()
         .onAppear {
-            quoteViewModel.loadQuote()
+            quoteViewModel.getQuote()
         }
     }
     

@@ -6,10 +6,12 @@
 //
 
 import Foundation
+
 class Configurator {
     static var shared = Configurator()
     
     func registerServices() {
-        ServiceLocator.shared.addService(KanyeAPI())
+        ServiceLocator.shared.addService(KanyeAPI(url: "https://api.kanye.rest"))
+        
     }
 }

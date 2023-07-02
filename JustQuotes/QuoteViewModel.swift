@@ -12,12 +12,11 @@ class QuoteViewModel: ObservableObject {
     
     @Published var text: String = ""
     
-    func loadQuote() {
+    func getQuote() {
         Task { @MainActor in
-            text = await (kanyeAPI?.loadQuote())!
-            
+            let quote = await (kanyeAPI?.makeRequest())!
+            text = quote.quote
         }
-        
     }
     
     init() {

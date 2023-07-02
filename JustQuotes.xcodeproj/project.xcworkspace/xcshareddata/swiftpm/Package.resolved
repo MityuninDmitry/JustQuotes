@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "networkpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MityuninDmitry/NetworkPackage.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7d3986e922527aeb795442195883fbc3152f1f11"
+      }
+    }
+  ],
+  "version" : 2
+}
